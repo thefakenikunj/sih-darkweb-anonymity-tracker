@@ -3,13 +3,24 @@
 An OSINT and forensic analytics platform designed to collect, process, and correlate cross-platform digital footprints using stylometric analysis, behavioral signature extraction, and entity graph resolution.
 
 ## Key Features
-- **Stylometric Forensics**: Identifies writing patterns and vocabulary signatures across disparate sources.
-- **Behavioral Analysis**: Correlates activity timestamps and metadata.
-- **Entity Resolution Engine**: Resolves identities and links aliases in an interactive network graph.
-- **Interactive Visualization**: Render web-based graph topologies (`network.html`).
+* **Stylometric Forensics**: Identifies writing patterns, stylistic traits, and vocabulary signatures across disparate text sources.
+* **Behavioral Analysis**: Correlates activity timestamps, frequency distribution, and metadata.
+* **Entity Resolution Engine**: Resolves identities, links cross-platform aliases, and visualizes connections in an interactive network graph.
+* **Interactive Visualization**: Renders web-based graph topologies (`network.html`) for dynamic network exploration.
 
-## Installation & Setup
-1. Clone the repository and navigate to the root folder:
-   ```bash
-   git clone <repository-url>
-   cd <repository-folder>
+## Directory Structure
+```text
+├── docs/                 # Documentation and presentation slides
+├── src/                  # Application source code
+│   ├── collectors/       # Data ingestion modules
+│   ├── data/             # Sample datasets and entity mappings
+│   ├── services/         # Core analytical services (stylometry, graph, resolution)
+│   ├── scripts/          # Evaluation and benchmark scripts
+│   ├── tests/            # Test suite
+│   └── app.py            # Main application server
+├── submission/           # Demonstration assets and videos
+├── .gitignore            # Git ignore rules
+├── LICENSE               # License file
+├── README.md             # Project documentation
+├── SUBMISSION_GUIDE.md   # SIH submission checklist
+└── requirements.txt      # Project dependencies
