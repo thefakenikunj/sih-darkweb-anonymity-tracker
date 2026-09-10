@@ -1,0 +1,51 @@
+[
+  {
+    "source": "cipher_king",
+    "target": "ck_logistics",
+    "type": "exact_pgp_match",
+    "confidence_score": 0.98,
+    "observed_at": "2026-03-07T12:00:00"
+  },
+  {
+    "source": "ck_logistics",
+    "target": "ghost_broker",
+    "type": "stylometric_similarity",
+    "confidence_score": 0.65,
+    "observed_at": "2026-04-01T09:10:00"
+  },
+  {
+    "source": "cipher_king",
+    "target": "dave_the_buyer",
+    "type": "buyer_inquiry",
+    "confidence_score": 0.22,
+    "observed_at": "2026-01-11T08:00:00"
+  },
+  {
+    "source": "shadow_vending",
+    "target": "nightshade_vendor",
+    "type": "exact_pgp_match",
+    "confidence_score": 0.92,
+    "observed_at": "2026-01-31T15:30:00"
+  },
+  {
+    "source": "silk_route_dev",
+    "target": "anon_coder404",
+    "type": "crypto_wallet_reuse",
+    "confidence_score": 0.96,
+    "observed_at": "2026-03-10T14:00:00"
+  },
+  {
+    "source": "nordic_pharma",
+    "target": "cipher_king",
+    "type": "escrow_pattern",
+    "confidence_score": 0.35,
+    "observed_at": "2026-03-02T13:40:00"
+  },
+  {
+    "source": "ghost_broker",
+    "target": "cipher_king",
+    "type": "xmpp_domain_overlap",
+    "confidence_score": 0.61,
+    "observed_at": "2026-04-01T09:10:00"
+  }
+]

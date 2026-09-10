@@ -1,0 +1,38 @@
+{
+  "same_persona_clusters": [
+    [
+      "cipher_king",
+      "ck_logistics",
+      "ghost_broker"
+    ],
+    [
+      "shadow_vending",
+      "nightshade_vendor"
+    ],
+    [
+      "silk_route_dev",
+      "anon_coder404"
+    ]
+  ],
+  "known_non_matches": [
+    [
+      "cipher_king",
+      "dave_the_buyer"
+    ],
+    [
+      "shadow_vending",
+      "lurker_909"
+    ],
+    [
+      "hydra_reseller",
+      "vortex_labs"
+    ]
+  ],
+  "unresolved": [
+    "lurker_909"
+  ],
+  "no_claim": [
+    "nordic_pharma",
+    "vortex_labs"
+  ]
+}

@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 520px;
+                 background-color: #0E1117;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#EF4444", "font": {"color": "#FFFFFF"}, "id": "cipher_king", "label": "CipherKing_Official", "shape": "dot", "title": "Handle: CipherKing_Official\nID: cipher_king\nRisk Score: 0.85"}, {"color": "#EF4444", "font": {"color": "#FFFFFF"}, "id": "ck_logistics", "label": "CK_Logistics_EU", "shape": "dot", "title": "Handle: CK_Logistics_EU\nID: ck_logistics\nRisk Score: 0.75"}, {"color": "#F59E0B", "font": {"color": "#FFFFFF"}, "id": "ghost_broker", "label": "GhostBroker_De", "shape": "dot", "title": "Handle: GhostBroker_De\nID: ghost_broker\nRisk Score: 0.6"}, {"color": "#22C55E", "font": {"color": "#FFFFFF"}, "id": "dave_the_buyer", "label": "Dave_The_Buyer99", "shape": "dot", "title": "Handle: Dave_The_Buyer99\nID: dave_the_buyer\nRisk Score: 0.2"}, {"color": "#F59E0B", "font": {"color": "#FFFFFF"}, "id": "shadow_vending", "label": "ShadowVending", "shape": "dot", "title": "Handle: ShadowVending\nID: shadow_vending\nRisk Score: 0.45"}, {"color": "#EF4444", "font": {"color": "#FFFFFF"}, "id": "nightshade_vendor", "label": "Nightshade_Corp", "shape": "dot", "title": "Handle: Nightshade_Corp\nID: nightshade_vendor\nRisk Score: 0.8"}, {"color": "#22C55E", "font": {"color": "#FFFFFF"}, "id": "lurker_909", "label": "lurker_909", "shape": "dot", "title": "Handle: lurker_909\nID: lurker_909\nRisk Score: 0.15"}, {"color": "#EF4444", "font": {"color": "#FFFFFF"}, "id": "nordic_pharma", "label": "NordicPharma_EU", "shape": "dot", "title": "Handle: NordicPharma_EU\nID: nordic_pharma\nRisk Score: 0.9"}, {"color": "#22C55E", "font": {"color": "#FFFFFF"}, "id": "silk_route_dev", "label": "SilkRoute_Dev", "shape": "dot", "title": "Handle: SilkRoute_Dev\nID: silk_route_dev\nRisk Score: 0.3"}, {"color": "#22C55E", "font": {"color": "#FFFFFF"}, "id": "anon_coder404", "label": "AnonCoder404", "shape": "dot", "title": "Handle: AnonCoder404\nID: anon_coder404\nRisk Score: 0.25"}, {"color": "#EF4444", "font": {"color": "#FFFFFF"}, "id": "hydra_reseller", "label": "Hydra_Reseller_01", "shape": "dot", "title": "Handle: Hydra_Reseller_01\nID: hydra_reseller\nRisk Score: 0.85"}, {"color": "#F59E0B", "font": {"color": "#FFFFFF"}, "id": "vortex_labs", "label": "VortexLabs", "shape": "dot", "title": "Handle: VortexLabs\nID: vortex_labs\nRisk Score: 0.5"}]);
+                  edges = new vis.DataSet([{"from": "cipher_king", "label": "exact_pgp_match", "title": "exact_pgp_match", "to": "ck_logistics"}, {"from": "ck_logistics", "label": "stylometric_similarity", "title": "stylometric_similarity", "to": "ghost_broker"}, {"from": "cipher_king", "label": "buyer_inquiry", "title": "buyer_inquiry", "to": "dave_the_buyer"}, {"from": "shadow_vending", "label": "exact_pgp_match", "title": "exact_pgp_match", "to": "nightshade_vendor"}, {"from": "silk_route_dev", "label": "crypto_wallet_reuse", "title": "crypto_wallet_reuse", "to": "anon_coder404"}, {"from": "nordic_pharma", "label": "escrow_pattern", "title": "escrow_pattern", "to": "cipher_king"}, {"from": "ghost_broker", "label": "xmpp_domain_overlap", "title": "xmpp_domain_overlap", "to": "cipher_king"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "barnesHut": {
+            "avoidOverlap": 0,
+            "centralGravity": 0.3,
+            "damping": 0.09,
+            "gravitationalConstant": -80000,
+            "springConstant": 0.001,
+            "springLength": 250
+        },
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

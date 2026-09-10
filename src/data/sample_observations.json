@@ -1,0 +1,82 @@
+[
+  {
+    "observation_id": "obs_101",
+    "entity_id": "cipher_king",
+    "platform": "Dread /v/DarknetMarkets",
+    "content": "Official restock notice for Northern Europe. Verify PGP key before ordering: -----BEGIN PGP PUBLIC KEY BLOCK----- Fingerprint: 4F8B 92E1 3A21 C490 ... Contact via Jabber: cipherking@xmpp.is. FE disabled, Multisig Escrow only.",
+    "observed_at": "2026-01-01T10:15:00",
+    "tags": ["pgp_key", "jabber_id", "listing"]
+  },
+  {
+    "observation_id": "obs_102",
+    "entity_id": "cipher_king",
+    "platform": "Dread /v/DarknetMarkets",
+    "content": "WARNING: Do not deal with impersonators on Telegram. I only operate via PGP encrypted messages on Dread or Abacus.",
+    "observed_at": "2026-01-15T14:22:00",
+    "tags": ["warning", "policy"]
+  },
+  {
+    "observation_id": "obs_150",
+    "entity_id": "dave_the_buyer",
+    "platform": "Dread /v/DarknetMarkets",
+    "content": "Can anyone vouch for CipherKing_Official? Looking to place a bulk order for EU shipment, need reliable stealth.",
+    "observed_at": "2026-01-11T08:00:00",
+    "tags": ["vouch_request", "buyer"]
+  },
+  {
+    "observation_id": "obs_204",
+    "entity_id": "ck_logistics",
+    "platform": "Abacus Market",
+    "content": "New profile on Abacus due to domain migration. Same PGP Key Fingerprint: 4F8B 92E1 3A21 C490. All orders processed within 24h with vacuum sealed stealth.",
+    "observed_at": "2026-03-07T12:00:00",
+    "tags": ["pgp_key", "vendor_migration"]
+  },
+  {
+    "observation_id": "obs_250",
+    "entity_id": "ck_logistics",
+    "platform": "Abacus Market",
+    "content": "Stealth restocked. Multisig Escrow required for all buyers under 50 successful transactions. No direct deals allowed.",
+    "observed_at": "2026-03-22T16:45:00",
+    "tags": ["escrow_policy"]
+  },
+  {
+    "observation_id": "obs_310",
+    "entity_id": "ghost_broker",
+    "platform": "Archetyp Market",
+    "content": "Bulk batch price reduction for EU region. Escrow required as always. Send PGP encrypted shipping details to ghostbroker@xmpp.is.",
+    "observed_at": "2026-04-01T09:10:00",
+    "tags": ["stylometric_match", "pricing"]
+  },
+  {
+    "observation_id": "obs_401",
+    "entity_id": "shadow_vending",
+    "platform": "Breached Forums",
+    "content": "Leaked database dump available. Verify identity using PGP fingerprint: D982 11AC 8071 FE32. Contact via Session ID: 05a2f89012...",
+    "observed_at": "2026-01-21T11:00:00",
+    "tags": ["pgp_key", "session_id"]
+  },
+  {
+    "observation_id": "obs_402",
+    "entity_id": "nightshade_vendor",
+    "platform": "XSS Forum",
+    "content": "Offering access logs and corporate databases. Same PGP key fingerprint: D982 11AC 8071 FE32. Standard escrow terms apply via forum middleman.",
+    "observed_at": "2026-01-31T15:30:00",
+    "tags": ["pgp_key", "forum_escrow"]
+  },
+  {
+    "observation_id": "obs_701",
+    "entity_id": "silk_route_dev",
+    "platform": "Github",
+    "content": "Published automated darknet escrow verification script written in Python. BTC wallet for donations: 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+    "observed_at": "2026-02-01T10:00:00",
+    "tags": ["code_repository", "crypto_wallet"]
+  },
+  {
+    "observation_id": "obs_702",
+    "entity_id": "anon_coder404",
+    "platform": "XSS Forum",
+    "content": "Check my open source escrow tool on GitHub. If you find it useful, tip to my BTC address: 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+    "observed_at": "2026-03-10T14:00:00",
+    "tags": ["crypto_wallet_match"]
+  }
+]

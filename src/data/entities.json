@@ -1,0 +1,110 @@
+[
+  {
+    "entity_id": "cipher_king",
+    "handle": "CipherKing_Official",
+    "platform": "Dread",
+    "entity_type": "persona",
+    "risk_score": 0.85,
+    "first_seen": "2026-01-01T10:15:00",
+    "last_seen": "2026-03-02T18:45:00"
+  },
+  {
+    "entity_id": "ck_logistics",
+    "handle": "CK_Logistics_EU",
+    "platform": "Abacus Market",
+    "entity_type": "persona",
+    "risk_score": 0.75,
+    "first_seen": "2026-03-07T12:00:00",
+    "last_seen": "2026-05-21T09:30:00"
+  },
+  {
+    "entity_id": "ghost_broker",
+    "handle": "GhostBroker_De",
+    "platform": "Archetyp Market",
+    "entity_type": "persona",
+    "risk_score": 0.60,
+    "first_seen": "2026-01-05T14:20:00",
+    "last_seen": "2026-07-20T16:10:00"
+  },
+  {
+    "entity_id": "dave_the_buyer",
+    "handle": "Dave_The_Buyer99",
+    "platform": "Dread",
+    "entity_type": "persona",
+    "risk_score": 0.20,
+    "first_seen": "2026-01-11T08:00:00",
+    "last_seen": "2026-01-11T11:20:00"
+  },
+  {
+    "entity_id": "shadow_vending",
+    "handle": "ShadowVending",
+    "platform": "Breached Forums",
+    "entity_type": "persona",
+    "risk_score": 0.45,
+    "first_seen": "2026-01-21T11:00:00",
+    "last_seen": "2026-04-11T14:15:00"
+  },
+  {
+    "entity_id": "nightshade_vendor",
+    "handle": "Nightshade_Corp",
+    "platform": "XSS Forum",
+    "entity_type": "persona",
+    "risk_score": 0.80,
+    "first_seen": "2026-01-31T15:30:00",
+    "last_seen": "2026-04-21T22:00:00"
+  },
+  {
+    "entity_id": "lurker_909",
+    "handle": "lurker_909",
+    "platform": "Exploit.in",
+    "entity_type": "persona",
+    "risk_score": 0.15,
+    "first_seen": "2026-02-25T03:12:00",
+    "last_seen": "2026-02-25T03:12:00"
+  },
+  {
+    "entity_id": "nordic_pharma",
+    "handle": "NordicPharma_EU",
+    "platform": "CryptBB",
+    "entity_type": "persona",
+    "risk_score": 0.90,
+    "first_seen": "2026-01-06T09:00:00",
+    "last_seen": "2026-05-01T17:40:00"
+  },
+  {
+    "entity_id": "silk_route_dev",
+    "handle": "SilkRoute_Dev",
+    "platform": "GitHub",
+    "entity_type": "persona",
+    "risk_score": 0.30,
+    "first_seen": "2026-02-01T10:00:00",
+    "last_seen": "2026-06-12T19:00:00"
+  },
+  {
+    "entity_id": "anon_coder404",
+    "handle": "AnonCoder404",
+    "platform": "XSS Forum",
+    "entity_type": "persona",
+    "risk_score": 0.25,
+    "first_seen": "2026-03-10T14:00:00",
+    "last_seen": "2026-06-15T11:00:00"
+  },
+  {
+    "entity_id": "hydra_reseller",
+    "handle": "Hydra_Reseller_01",
+    "platform": "Telegram",
+    "entity_type": "persona",
+    "risk_score": 0.85,
+    "first_seen": "2026-04-05T08:00:00",
+    "last_seen": "2026-07-01T13:20:00"
+  },
+  {
+    "entity_id": "vortex_labs",
+    "handle": "VortexLabs",
+    "platform": "Abacus Market",
+    "entity_type": "persona",
+    "risk_score": 0.50,
+    "first_seen": "2026-05-10T11:30:00",
+    "last_seen": "2026-08-01T16:00:00"
+  }
+]
